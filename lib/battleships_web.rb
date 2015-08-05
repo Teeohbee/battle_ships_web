@@ -1,6 +1,5 @@
 require 'sinatra/base'
-
-
+require 'battleships'
 
 class BattleshipsWeb < Sinatra::Base
 
@@ -18,9 +17,14 @@ class BattleshipsWeb < Sinatra::Base
     erb :newgame
   end
 
-  get '/game' do
+  post '/newgame' do
     session[:playername] = params[:playername]
-    @playername = session[:playername]
+    redirect '/newgame' if session[:playername] == ""
+    redirect '/game'
+  end
+
+  get '/game' do
+    $game = Game.new Player, Board
     erb :game
   end
 
