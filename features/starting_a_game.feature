@@ -10,10 +10,10 @@ Feature: Starting the game
 
   Scenario: Filling in player name
     Given I am on the newgame page
-    When I fill in "playername" with "Name"
+    When I fill in "playername" with "Toby"
     And I press "submit"
     Then I should see "Game start"
-    And I should see "Player 1"
+    And I should see "Toby"
 
   Scenario: Player does not enter name
     Given I am on the newgame page

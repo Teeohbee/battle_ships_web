@@ -18,6 +18,9 @@ module NavigationHelpers
 
     when /game\s?page/
       '/game'
+
+    when /gameplay\s?page/
+      '/gameplay'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

@@ -17,3 +17,7 @@ end
 And(/^I page should have "([^"]*)"$/) do |text|
   expect(page).to have_content(text)
 end
+
+When(/^I select "([^"]*)" from "([^"]*)"$/) do |selection, dropdown|
+  select selection, from: dropdown
+end

@@ -1,0 +1,19 @@
+<h1>Game in Action</h1>
+<h2 name="playername">Player 1: <%= session[:playername] %></h2>
+
+<label>Opponent's Board
+<pre><%= $game.opponent_board_view $game.player_1 %></pre>
+</label>
+<label>Your Board
+<pre><%= $game.own_board_view $game.player_1 %></pre>
+</label>
+
+<form method="Post">
+  <label for="Fire command">Fire at:
+  <input type="text" name="fire_loc">
+  <input type="submit" value="Shoot!">
+  </label>
+
+  <h3>Player 1:<%= @player_1_result %></h3>
+</form>
+

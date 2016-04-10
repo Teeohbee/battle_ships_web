@@ -1,4 +1,28 @@
 <h1>Game start</h1>
 <h2 name="playername">Player 1: <%= session[:playername] %></h2>
 
-<%= $game.own_board_view $game.player_1 %>
+<pre><%= $game.own_board_view $game.player_1 %></pre>
+
+<form method="Post">
+<label>Please select a ship type:
+<select name="ship_type">
+  <option value="submarine">Submarine</option>
+  <option value="destroyer">Destroyer</option>
+  <option value="cruiser">Cruiser</option>
+  <option value="battleship">Battleship</option>
+  <option value="aircraft_carrier">Aircraft Carrier</option>
+</select>
+</label>
+<BR><BR>
+<label>Please select an orientation:
+<select name="direction">
+  <option value="horizontally">Horizontal</option>
+  <option value="vertically">Vertical</option>
+</select>
+</label>
+<BR><BR>
+<label>Please type a location:
+<input type="text" name="location">
+<input type="submit" value="submit">
+</label>
+</form>
